@@ -63,3 +63,15 @@ if (error) {
 }
 
 }
+
+// Task 3 Render Tour Cards
+
+return (
+    <section className="gallery"> {/* Container for the gallery */}
+        {tours.map((tour) => ( // Map through the tours to create TourCard for each tour
+            <TourCard key={tour.id} {...tour} onRemove={onRemove} /> // TourCard component for each tour
+        ))}
+    </section>
+); 
+
+export default Gallery; // Exporting the Gallery component as default export

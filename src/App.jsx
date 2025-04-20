@@ -20,13 +20,24 @@ function App() {
 
   const filteredTours = selectedTour === "all" ? tours : tours.filter((tour) => tour.name === selectedTour); // Filter tours based on selected destination
 
+   // Task 3 Render Tour Cards
+  
+   const removeTour = (id) => { 
+
+    setTours((prevTours) => prevTours.filter((tour) => tour.id !== id)); // Filter out tour by id
+
+    const updatedTours = tours.filter((tour) => tour.id !== id); // Update the tours state with the filtered tours
+  };
+
 
   return(
     <main>
       <h1>Our Tours</h1>
 
       <DestinationSelector tours={tours} selectedTour={selectedTour} setSelectedTour={setSelectedTour} /> {/* Destination selector component */}
-      </main>
+
+        <Gallery tours={tours} setTours ={setTours} onRemove={removeTour} /> {/* Pass tours and removeTour function as props to Gallery */}  
+    </main>  
   );
 
 }
