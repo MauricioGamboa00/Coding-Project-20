@@ -64,6 +64,17 @@ if (error) {
 
 }
 
+// Task 4 Reset View
+
+if (tours.length === 0) { // If there are no tours to display
+    return (
+        <div className="No-Tours">
+            <h2>No Tours available</h2> {/* Display this message when there are no tours */}
+            <button onClick ={fetchTours}>Refresh</button> {/* Button to refresh the tours */}
+        </div>
+    );
+}
+
 // Task 3 Render Tour Cards
 
 return (
