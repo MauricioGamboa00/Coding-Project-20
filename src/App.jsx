@@ -24,8 +24,7 @@ function App() {
   
    const removeTour = (id) => { 
 
-    setTours((prevTours) => prevTours.filter((tour) => tour.id !== id)); // Filter out tour by id
-
+    setTours((prevTours) => {
     const updatedTours = prevTours.filter((tour) => tour.id !== id); // Update the tours state with the filtered tours
 
     // Task 4 Reset View
@@ -38,7 +37,9 @@ function App() {
     }
     return updatedTours; // Return the updated tours state
     
-  };
+  })
+}
+;
   
   
 

@@ -10,7 +10,7 @@ const DestinationSelector = ({ tours, selectedTour, setSelectedTour }) => { // D
 
             <select id="destination" value={selectedTour} onChange={(e) => setSelectedTour(e.target.value)}> {/* Dropdown to select destination */}
 
-                <option value="all">All</option> {/* Option to show all tours */}
+                <option value="all">All Destinations</option> {/* Option to show all tours */}
 
                 {tours.map((tour) => ( // Map through the tours to create options for each destination
 
