@@ -6,7 +6,7 @@ import Gallery from "./Components/Gallery"; // Importing the Gallery component
 
 import DestinationSelector from "./Components/DestinationSelector"; // Importing the DestinationSelector component
 
-import './styles/styles.css'; // Importing the CSS styles
+import './Styles/Styles.css'; // Importing the CSS styles
 
 // Main App component
 
@@ -39,6 +39,7 @@ function App() {
     return updatedTours; // Return the updated tours state
     
   };
+  
   
 
 
