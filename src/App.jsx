@@ -8,7 +8,7 @@ import DestinationSelector from "./Components/DestinationSelector"; // Importing
 
 import './Styles/Styles.css'; // Importing the CSS styles
 
-// Main App component
+// Main App componentmy f
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
 
     setTours((prevTours) => prevTours.filter((tour) => tour.id !== id)); // Filter out tour by id
 
-    const updatedTours = tours.filter((tour) => tour.id !== id); // Update the tours state with the filtered tours
+    const updatedTours = prevTours.filter((tour) => tour.id !== id); // Update the tours state with the filtered tours
 
     // Task 4 Reset View
 
@@ -49,7 +49,7 @@ function App() {
 
       <DestinationSelector tours={tours} selectedTour={selectedTour} setSelectedTour={setSelectedTour} /> {/* Destination selector component */}
 
-        <Gallery tours={tours} setTours ={setTours} onRemove={removeTour} /> {/* Pass tours and removeTour function as props to Gallery */}  
+        <Gallery tours={filteredTours} setTours ={setTours} onRemove={removeTour} /> {/* Pass tours and removeTour function as props to Gallery */}  
     </main>  
   );
 

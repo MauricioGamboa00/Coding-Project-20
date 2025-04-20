@@ -13,11 +13,11 @@ const DestinationSelector = ({ tours, selectedTour, setSelectedTour }) => { // D
                 <option value="all">All</option> {/* Option to show all tours */}
 
                 {tours.map((tour) => ( // Map through the tours to create options for each destination
-                
-                    <option key={tour.id} value={tour.destination}>{tour.destination}</option> // Option for each tour destination
+
+                    <option key={tour.id} value={tour.name}>{tour.name}</option> // Option for each tour destination
                 ))}
-            </select>   {/* Closing the select tag */}
-        </div> // Closing the div tag
+            </select> 
+        </div> 
     );
 }
 
