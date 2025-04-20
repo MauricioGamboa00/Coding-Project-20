@@ -62,7 +62,7 @@ if (error) {
 
 }
 
-}
+
 
 // Task 4 Reset View
 
@@ -84,5 +84,5 @@ return (
         ))}
     </section>
 ); 
-
+}
 export default Gallery; // Exporting the Gallery component as default export
